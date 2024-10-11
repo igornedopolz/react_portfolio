@@ -64,7 +64,8 @@ font-size: 1rem;
     }
   
     .about_container {
-      padding: 100px 50px;
+      padding: 0px 50px;
+      padding-top: 100px;
     }
   
     .about-content {
@@ -96,7 +97,8 @@ font-size: 1rem;
     }
   
     .about_container {
-      padding: 100px 30px;
+      padding: 0px 30px;
+      padding-top: 100px;
     }
   
     .about-content {
