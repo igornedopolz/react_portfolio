@@ -1,0 +1,100 @@
+{
+  "skills": [
+    {
+      "imgSrc": "https://img.icons8.com/color/452/css3.png",
+      "text": "CSS3"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/html-5.png",
+      "text": "HTML5"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/javascript.png",
+      "text": "JavaScript"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/c-sharp-logo.png",
+      "text": "C#"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/plasticine/452/react.png",
+      "text": "React"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/git.png",
+      "text": "Git"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/tailwindcss.png",
+      "text": "Tailwind CSS"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/linux.png",
+      "text": "Linux"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/fluency-systems-filled/50/9A9A9A/nextjs.png",
+      "text": "Next js"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/tailwindcss.png",
+      "text": "Tailwind CSS"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/css3.png",
+      "text": "CSS3"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/javascript.png",
+      "text": "JavaScript"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/linux.png",
+      "text": "Linux"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/plasticine/452/react.png",
+      "text": "React Native"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/c-sharp-logo.png",
+      "text": "C#"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/git.png",
+      "text": "Git"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/fluency-systems-filled/50/9A9A9A/nextjs.png",
+      "text": "Next js"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/tailwindcss.png",
+      "text": "Tailwind CSS"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/html-5.png",
+      "text": "HTML5"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/javascript.png",
+      "text": "JavaScript"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/css3.png",
+      "text": "CSS3"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/fluency-systems-filled/50/9A9A9A/nextjs.png",
+      "text": "Next js"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/plasticine/452/react.png",
+      "text": "React"
+    },
+    {
+      "imgSrc": "https://img.icons8.com/color/452/javascript.png",
+      "text": "JavaScript"
+    }
+  ]
+}

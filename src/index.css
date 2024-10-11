@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://gistcdn.githack.com/mfd/7c7a915eb31474cc8c6a65066a4c4dc3/raw/f0f2fb94c21dea904812a53e0eb6cf0bc87f3754/GTWalsheimPro.css');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root {
+    /* Light Theme Colors */
+    --bg-color: #ffffff;
+    --bg-accent-color: #f9f9f9; /* Light gray that blends with the white background */
+    --devider: #eeeeee;
+    --text-color: #000000;
+    --text-accent-color: #ffffff;
+    --text-accent-color-hover: #ffffff;
+    --primary-color: #1da1f2;
+    --secondary-color: #6c757d;
+    --accent-color: #006aff;
+    --border-color: #e0e0e091;
+    --logo: #000000;
+    --footer-bg: #f1f1f1;
+    --box-shadow: rgba(0, 0, 0, 0.282) 0px 3px 8px;
+    --gradient-start: rgba(255, 255, 255, 1);  /* Use --bg-color */
+    --gradient-middle: rgba(255, 255, 255, 0.5); /* Semi-transparent --bg-color */
+    --gradient-end: rgba(255, 255, 255, 0); /* Transparent --bg-color */
+  }
+  
+  [data-theme="dark"] {
+    /* Dark Theme Colors */
+    --bg-color: #0e141b;
+    --bg-accent-color: #0d1c2d; /* Slightly lighter shade of dark blue */
+    --devider: #102339;
+    --text-color: #ffffff;
+    --text-accent-color: #f6f6f6;
+    --text-accent-color-hover: #ffffff;
+    --primary-color: #ff5277;
+    --secondary-color: #adb5bd;
+    --accent-color: #ff4e4e;
+    --border-color: #ffdede26;
+    --logo: #ffffff;
+    --footer-bg: #343a40;
+    --box-shadow: rgba(75, 130, 185, 0.357) 0px 3px 8px;
+    --gradient-start: rgba(14, 20, 27, 1);  /* Use --bg-color */
+    --gradient-middle: rgba(14, 20, 27, 0.5); /* Semi-transparent --bg-color */
+    --gradient-end: rgba(14, 20, 27, 0); /* Transparent --bg-color */
+
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: var(--text-color) ;
+    background: var(--bg-color);
+  }
+  
+  /* Set up a global box-sizing */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Default font settings */
+  body {
+    font-family: GT Walsheim Pro, "Rubik", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Remove bullet points and list styles */
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Anchor tags styling */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Default heading styling */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  .devider{
+    height: 1px;
+    background: var(--devider);
+    width: 90%;
+    max-width: 1600px;
+    margin: auto;
+  }

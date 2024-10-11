@@ -1,0 +1,128 @@
+
+.about-header {
+    font-size: 6em;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin: 50px 0px;
+    text-align: left;
+}
+
+.about {
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+margin: auto;
+
+}
+
+.about_container {
+padding: 0px 100px;
+width: 100%;
+max-width: 1600px;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.about-content {
+display: flex;
+align-items: center;
+justify-content: space-between;
+text-align: left;
+}
+
+.profile-picture img {
+width: 400px;
+border-radius: 5%;
+margin-right: 40px;
+}
+
+.bio {
+width: 600px;
+padding: 50px;
+}
+
+.bio p {
+line-height: 1.9;
+margin-bottom: 15px;
+font-size: 1rem;
+}
+
+.name{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+    .about-header {
+      font-size: 4.5em;
+      margin: 60px 0px;
+      text-align: center; /* Center the text for better visual balance */
+    }
+  
+    .about_container {
+      padding: 0px 50px;
+    }
+  
+    .about-content {
+      flex-direction: column; /* Stack the content vertically */
+      text-align: center;
+    }
+  
+    .profile-picture img {
+      width: 300px;
+      margin-right: 0; /* Remove right margin for vertical stacking */
+      margin-bottom: 30px; /* Add space below the image */
+    }
+  
+    .bio {
+      width: 100%;
+      padding: 30px;
+    }
+  
+    .bio p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-header {
+      font-size: 3.5em;
+      margin: 40px 0px;
+      text-align: center;
+    }
+  
+    .about_container {
+      padding: 0px 30px;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-picture img {
+      width: 200px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .bio {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .bio p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+  
+    .name {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+  
