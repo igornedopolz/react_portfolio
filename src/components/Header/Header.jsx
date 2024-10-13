@@ -1,25 +1,25 @@
 // Header.js
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import DesktopHeader from './DesktopHeader';
+import MobileHeader from './MobileHeader'; // Import the new MobileHeader
 
-function Header({children, scrollPosition}) {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
-  
-    // Function to check the window size
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 1024);
+function Header({ children, scrollPosition }) {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+
+  // Function to check the window size
+  const handleResize = () => {
+    setIsDesktop(window.innerWidth > 1024);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
-  
-    useEffect(() => {
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
+  }, []);
 
   return (
     <header>
@@ -34,9 +34,12 @@ function Header({children, scrollPosition}) {
           <RiVerifiedBadgeFill className="verified" />
         </div>
 
-        {isDesktop? 
-        <DesktopHeader scrollPosition={scrollPosition}>{children}</DesktopHeader> 
-        : "" }
+        {/* Conditionally render DesktopHeader or MobileHeader based on screen size */}
+        {isDesktop ? (
+          <DesktopHeader scrollPosition={scrollPosition}>{children}</DesktopHeader>
+        ) : (
+          <MobileHeader>{children}</MobileHeader>
+        )}
       </div>
     </header>
   );
