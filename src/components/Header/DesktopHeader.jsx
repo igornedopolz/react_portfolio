@@ -14,11 +14,11 @@ function DesktopHeader({children, scrollPosition}) {
         linkBg.current.style.left = `0%`;
         setActiveLink("home");
         break;
-      case scrollPosition >= 200 && scrollPosition < 1300:
+      case scrollPosition >= 200 && scrollPosition < 1400:
         linkBg.current.style.left = `20%`;
         setActiveLink("skills");
         break;
-      case scrollPosition >= 1300 && scrollPosition < 2100:
+      case scrollPosition >= 1400 && scrollPosition < 2100:
         linkBg.current.style.left = `40%`;
         setActiveLink("about");
         break;

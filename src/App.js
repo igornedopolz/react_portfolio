@@ -40,9 +40,25 @@ function App() {
       document.documentElement.setAttribute('data-theme', initialTheme);
     }
 
+    // Add event listener for system theme changes
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleSystemThemeChange = (e) => {
+      const newSystemTheme = e.matches ? 'dark' : 'light';
+      if (!localStorage.getItem('theme')) {  // Only update if no user preference is set
+        setTheme(newSystemTheme);
+        document.documentElement.setAttribute('data-theme', newSystemTheme);
+      }
+    };
+
+    prefersDarkScheme.addEventListener('change', handleSystemThemeChange);
+
+    // Listen for scroll events
     window.addEventListener('scroll', handleScroll);
 
     return () => {
+      // Cleanup event listeners
+      prefersDarkScheme.removeEventListener('change', handleSystemThemeChange);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []); // Ensure this runs only once on mount
