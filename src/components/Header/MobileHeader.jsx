@@ -6,7 +6,7 @@ const MobileHeader = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); 
   };
 
   const closeMenu = () => {
