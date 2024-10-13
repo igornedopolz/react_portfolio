@@ -16,7 +16,7 @@ const MobileHeader = ({ children }) => {
   // Define the animation variants
   const variants = {
     open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at calc(100% - 80px) 60px)`,
+      clipPath: `circle(${height * 2 + 200}px at calc(100% - 60px) 60px)`,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -24,7 +24,7 @@ const MobileHeader = ({ children }) => {
       },
     }),
     closed: {
-      clipPath: "circle(30px at calc(100% - 80px) 60px)",
+      clipPath: "circle(30px at calc(100% - 60px) 60px)",
       transition: {
         delay: 0.2,
         type: "spring",
@@ -42,7 +42,8 @@ const MobileHeader = ({ children }) => {
       transition: {
         delay: i * 0.4,
         type: "spring",
-        stiffness: 120,
+        stiffness: 400,
+        damping: 10,
       },
 
     }),
@@ -110,6 +111,10 @@ const MobileHeader = ({ children }) => {
             <motion.li variants={linkVariants} custom={4} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a href="#contact" onClick={closeMenu}>Contact</a>
             </motion.li>
+            <motion.li variants={linkVariants} custom={5} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              {children}
+            </motion.li>
+
           </motion.ul>
         </motion.nav>
       </motion.div>

@@ -101,23 +101,6 @@ header{
     margin-left: 5px;
 }
 
-@media (max-width: 1024px) {
-    .logo{
-        font-size: 1.2rem;
-    }
-
-    .header-container{
-        padding: 30px 50px;
-    }
-    
-}
-
-@media (max-width: 768px) {
-
-.header-container{
-    padding: 30px 30px;
-}
-}
 
 /* MobileHeader.css */
 .mobile-header-container {
@@ -137,7 +120,7 @@ header{
     z-index: 10;
     position: fixed;
     top: 30px;
-    right: 50px;
+    right: 30px;
   }
   
   .bar {
@@ -190,16 +173,40 @@ header{
   }
   
   .mobile-nav ul li {
-    margin: 16px 0;
+    margin: 54px 0;
+    display: flex;
+    justify-content: center;
   }
   
   .mobile-nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 5em;
+    font-size: 4em;
     font-family: "Permanent Marker", cursive;
     font-weight: 800;
     cursor: pointer;
     display: block;
   }
   
+
+  @media (max-width: 1024px) {
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .header-container{
+        padding: 30px 50px;
+    }
+
+    .theme-switcher{
+        font-size: 2rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+.header-container{
+    padding: 30px 30px;
+}
+}
