@@ -45,10 +45,10 @@ function App() {
 
     const handleSystemThemeChange = (e) => {
       const newSystemTheme = e.matches ? 'dark' : 'light';
-      if (!localStorage.getItem('theme')) {  // Only update if no user preference is set
+        // Only update if no user preference is set
         setTheme(newSystemTheme);
         document.documentElement.setAttribute('data-theme', newSystemTheme);
-      }
+    
     };
 
     prefersDarkScheme.addEventListener('change', handleSystemThemeChange);
