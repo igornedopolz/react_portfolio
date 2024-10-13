@@ -65,7 +65,7 @@ font-size: 1rem;
   
     .about_container {
       padding: 0px 50px;
-      padding-top: 100px;
+      padding-bottom: 50px;
     }
   
     .about-content {
@@ -81,11 +81,13 @@ font-size: 1rem;
   
     .bio {
       width: 100%;
-      padding: 30px;
+      padding: 0px;
     }
   
     .bio p {
-      font-size: 1rem;
+      font-size: 1.4rem;
+      text-align: justify;
+      line-height: 1.4;
     }
   }
 
@@ -98,7 +100,7 @@ font-size: 1rem;
   
     .about_container {
       padding: 0px 30px;
-      padding-top: 100px;
+
     }
   
     .about-content {
@@ -114,12 +116,13 @@ font-size: 1rem;
   
     .bio {
       width: 100%;
-      padding: 20px;
+      padding: 0px;
     }
   
     .bio p {
-      font-size: 0.9rem;
-      line-height: 1.7;
+      font-size: 1.2rem;
+      text-align: justify;
+      line-height: 1.4;
     }
   
     .name {

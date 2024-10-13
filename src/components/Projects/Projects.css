@@ -97,7 +97,8 @@
 
   @media (max-width: 768px) {
     .projects-container {
-      padding: 100px 30px;
+      padding: 0px 30px;
+      padding-bottom: 0px;
     }
   
     .projects-title {

@@ -152,7 +152,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 30px;
-    text-align: center;
+    height: 80vh;
+    padding-top: 100px;
+    
     
   }
   .hero-right{
@@ -166,17 +168,21 @@
   }
 
   .hero-left h2 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 
   .hero-left p {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .hero-btn {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 0.9em;
   }
+  .hero-right{
+    display: none;
+  }
+
 
 
   .hero-image {

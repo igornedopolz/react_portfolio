@@ -6,7 +6,7 @@ header{
     background: linear-gradient(180deg, var(--gradient-start) 21%, var(--gradient-middle) 71%, var(--gradient-end) 100%);
     z-index: 10;
 }
-.navbar{
+.header-container{
     max-width: 1600px;
     width: 100%;
     margin: auto;
@@ -14,7 +14,9 @@ header{
     padding: 30px 100px;
     justify-content: space-between;
     align-items: center;
+
 }
+
 
 .logo{
     color: var(--logo);
@@ -97,4 +99,22 @@ header{
 .verified{
     color: var(--primary-color);
     margin-left: 5px;
+}
+
+@media (max-width: 1024px) {
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .header-container{
+        padding: 30px 50px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+.header-container{
+    padding: 30px 30px;
+}
 }

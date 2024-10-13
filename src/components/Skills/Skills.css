@@ -107,6 +107,9 @@
 }
 
 @media (max-width: 1024px) {
+    .skills{
+        min-height: 850px;
+    }
     
   
     .skills-header {
@@ -122,6 +125,10 @@
   }
   
   @media (max-width: 768px) {
+
+    .skills{
+        min-height: 800px;
+    }
 
     .skill-box{
         scale: 0.93;
