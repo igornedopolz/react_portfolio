@@ -2,6 +2,43 @@ import React from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: process.env.ACCESS_KEY,
+          ...formData,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success('Message sent successfully!', { position: 'top-right', theme: "colored" });
+        setFormData({ name: '', email: '', message: '' }); // Clear the form
+      } else {
+        toast.error('Failed to send message. Please try again.', { position: 'top-right', theme: "colored" });
+      }
+    } catch (error) {
+      toast.error('An error occurred. Please try again.', { position: 'top-right', theme: "colored" });
+    }
+  };
+
   return (
     <div className="contact-form">
       <h2 className="contact-form__title">Send me a message!</h2>
