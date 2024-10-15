@@ -1,6 +1,5 @@
 import React from 'react';
 import './Skills.css'; // Import the updated CSS file
-import { div } from 'framer-motion/client';
 
 // Skill component that accepts imgSrc and text as props
 function Skill({ imgSrc, text }) {

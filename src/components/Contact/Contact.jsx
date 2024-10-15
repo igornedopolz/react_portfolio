@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Contact.css';
 
@@ -26,19 +25,19 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: process.env.ACCESS_KEY,
+          access_key: process.env.ACCESS_KEY, // Ensure your access key is set in environment variables
           ...formData,
         }),
       });
 
       if (response.ok) {
-        toast.success('Message sent successfully!', { position: 'top-right', theme: "colored" });
+        toast.success('Message sent successfully!', { position: 'top-right', theme: 'colored' });
         setFormData({ name: '', email: '', message: '' }); // Clear the form
       } else {
-        toast.error('Failed to send message. Please try again.', { position: 'top-right', theme: "colored" });
+        toast.error('Failed to send message. Please try again.', { position: 'top-right', theme: 'colored' });
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again.', { position: 'top-right', theme: "colored" });
+      toast.error('An error occurred. Please try again.', { position: 'top-right', theme: 'colored' });
     }
   };
 
@@ -48,18 +47,41 @@ const Contact = () => {
       <p className="contact-form__subtitle">
         Got a question or proposal, or just want to say hello? Go ahead.
       </p>
-      <form className="contact-form__container">
-          <div className="contact-form__field">
-            <label className="contact-form__label" htmlFor="name">Your Name</label>
-            <input className="contact-form__input" type="text" id="name" name="name" placeholder="Enter your name" />
-          </div>
-          <div className="contact-form__field">
-            <label className="contact-form__label" htmlFor="email">Email Address</label>
-            <input className="contact-form__input" type="email" id="email" name="email" placeholder="Enter your email address" />
-          </div>
+      <form className="contact-form__container" onSubmit={handleSubmit}>
+        <div className="contact-form__field">
+          <label className="contact-form__label" htmlFor="name">Your Name</label>
+          <input
+            className="contact-form__input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            value={formData.name}
+            onChange={handleChange} // Connect handleChange
+          />
+        </div>
+        <div className="contact-form__field">
+          <label className="contact-form__label" htmlFor="email">Email Address</label>
+          <input
+            className="contact-form__input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            value={formData.email}
+            onChange={handleChange} // Connect handleChange
+          />
+        </div>
         <div className="contact-form__field">
           <label className="contact-form__label" htmlFor="message">Your Message</label>
-          <textarea className="contact-form__textarea" id="message" name="message" placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?" />
+          <textarea
+            className="contact-form__textarea"
+            id="message"
+            name="message"
+            placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+            value={formData.message}
+            onChange={handleChange} // Connect handleChange
+          />
         </div>
         <button type="submit" className="contact-form__button">SHOOT →</button>
       </form>
