@@ -74,7 +74,7 @@ function App() {
       <Hero/>
       <Skills/>
       <About/>
-      <div className='divider'/>
+      <div className='devider'/>
       <Projects/>
       <Contact/>
       <Footer/>

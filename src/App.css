@@ -1,0 +1,7 @@
+.devider{
+    height: 2px;
+    background: var(--devider);
+    width: 90%;
+    max-width: 1600px;
+    margin: auto;
+  }

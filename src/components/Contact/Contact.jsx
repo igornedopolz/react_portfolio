@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,14 +9,35 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false); // New state for loading
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    if (!name || !email || !message) {
+      toast.error('Please fill out all fields.', { position: 'top-right' });
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error('Please enter a valid email address.', { position: 'top-right' });
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return; // Don't submit if validation fails
+    }
+
+    setLoading(true); // Start loading
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -24,19 +46,22 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: process.env.ACCESS_KEY, // Ensure your access key is set in environment variables
+          access_key: process.env.REACT_APP_ACCESS_KEY, // Use environment variable for access key
           ...formData,
         }),
       });
 
       if (response.ok) {
-        toast.success('Message sent successfully!', { position: 'top-right', theme: 'colored' });
+        toast.success('Message sent successfully!', { position: 'top-right' });
         setFormData({ name: '', email: '', message: '' }); // Clear the form
       } else {
-        toast.error('Failed to send message. Please try again.', { position: 'top-right', theme: 'colored' });
+        const result = await response.json();
+        toast.error(result.message || 'Failed to send message. Please try again.', { position: 'top-right' });
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again.', { position: 'top-right', theme: 'colored' });
+      toast.error('An error occurred. Please check your network and try again.', { position: 'top-right' });
+    } finally {
+      setLoading(false); // Stop loading after response or error
     }
   };
 
@@ -56,7 +81,8 @@ const Contact = () => {
             name="name"
             placeholder="Enter your name"
             value={formData.name}
-            onChange={handleChange} // Connect handleChange
+            onChange={handleChange}
+            disabled={loading} // Disable input when loading
           />
         </div>
         <div className="contact-form__field">
@@ -68,7 +94,8 @@ const Contact = () => {
             name="email"
             placeholder="Enter your email address"
             value={formData.email}
-            onChange={handleChange} // Connect handleChange
+            onChange={handleChange}
+            disabled={loading} // Disable input when loading
           />
         </div>
         <div className="contact-form__field">
@@ -77,15 +104,21 @@ const Contact = () => {
             className="contact-form__textarea"
             id="message"
             name="message"
-            placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
+            placeholder="Your message here"
             value={formData.message}
-            onChange={handleChange} // Connect handleChange
+            onChange={handleChange}
+            disabled={loading} // Disable textarea when loading
           />
         </div>
-        <button type="submit" className="contact-form__button">SHOOT →</button>
+        <button type="submit" className="contact-form__button" disabled={loading}>
+          {loading ? 'SENDING...' : 'SHOOT →'}
+        </button>
       </form>
+
+      {/* ToastContainer for toast notifications */}
+      <ToastContainer />
     </div>
   );
-}
+};
 
 export default Contact;
