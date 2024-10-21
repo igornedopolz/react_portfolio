@@ -5,3 +5,11 @@
     max-width: 1600px;
     margin: auto;
   }
+
+  @media (max-width: 1024px) {
+    .icon{
+      width: 50px!important;
+      height: 50px!important;
+    }
+    }
+

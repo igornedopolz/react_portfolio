@@ -68,9 +68,9 @@ function App() {
       <Header scrollPosition={scrollPosition}>
         <button onClick={toggleTheme} className="theme-switcher" aria-label="Toggle Theme">
         {theme === 'dark' ? (
-          <img style={{height: "25", width: "25px" }} src="/lightbulb.png" alt="Your Profile" />
+          <img style={{height: "25", width: "25px" }} className='icon' src="/lightbulb.png" alt="Your Profile" />
         ) : (
-          <img style={{height: "20", width: "20px" }} src="/moon.png" alt="Your Profile" />)}
+          <img style={{height: "20", width: "20px" }} className='icon' src="/moon.png" alt="Your Profile" />)}
         </button>
       </Header>
       <Hero/>
