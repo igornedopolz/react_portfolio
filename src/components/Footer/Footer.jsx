@@ -7,10 +7,8 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__social-media">
           <h3 className="footer__title">Follow</h3>
-          <ul className="footer__social-list">
-            <li className="footer__social-item"><a href="https://twitter.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li className="footer__social-item"><a href="https://linkedin.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
+            <p className="footer__social-item"><a href="https://twitter.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+            <p className="footer__social-item"><a href="https://linkedin.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
 
         <div className="footer__contact">

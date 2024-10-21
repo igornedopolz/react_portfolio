@@ -2,7 +2,6 @@
 
 .skills{
     position: relative;
-    overflow-x: hidden;
     width: 100%;
     min-height: 700px;
     margin-top: 100px;
@@ -18,6 +17,7 @@
     background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 5%, var(--gradient-end) 95%, var(--gradient-start) 100%);
 }
 .skills-container {
+    overflow-x: hidden!important;
   display: flex;
   flex-direction: column;
   justify-content: center;

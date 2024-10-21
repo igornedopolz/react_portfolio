@@ -9,28 +9,28 @@ const Projects = () => {
         {/* Card 1 */}
         <div className="card">
           <a 
-            href="#about" 
+            href="https://rednify.com/en" 
             className='project-link' 
-            style={{ backgroundImage: 'url(https://rednify-v2.vercel.app/_next/image?url=%2Fportfolio%2Fedelweiss%2Fweb.jpg&w=1080&q=100)' }} 
+            style={{ backgroundImage: 'url(rednify.png)' }} 
             aria-label="Project 1 - View More Details"
           >
             {/* Hidden text for accessibility */}
             <span className="sr-only">Project 1</span>
           </a>
-          <button className="btn">View Project</button>
+          <a href="https://rednify.com/en"  className="btn">View Project</a>
         </div>
         
         {/* Card 2 */}
         <div className="card">
           <a 
-            href="#about" 
+            href="https://wollq.com/en" 
             className='project-link' 
-            style={{ backgroundImage: 'url(https://rednify-v2.vercel.app/_next/image?url=%2Fportfolio%2Fedelweiss%2Fweb.jpg&w=1080&q=100)' }} 
+            style={{ backgroundImage: 'url(Wollq.png)' }} 
             aria-label="Project 2 - View More Details"
           >
             <span className="sr-only">Project 2</span>
           </a>
-          <button className="btn">View Project</button>
+          <a href="https://wollq.com/en" className="btn">View Project</a>
         </div>
   
       </div>

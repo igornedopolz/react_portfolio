@@ -33,9 +33,7 @@
     padding: 0;
   }
   
-  .footer__social-item {
-    margin: 5px 0;
-  }
+ 
   
   .footer__social-link {
     font-size: 1.1em;
@@ -49,7 +47,7 @@
   }
   
   .footer__email {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
   
   .footer__email-link {

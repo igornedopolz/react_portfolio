@@ -67,8 +67,7 @@ function App() {
     <div className="App">
       <Header scrollPosition={scrollPosition}>
         <button onClick={toggleTheme} className="theme-switcher" aria-label="Toggle Theme">
-          {/* {theme === 'dark' ? <FaLightbulb style={{ color: 'white' }} /> : <MdDarkMode style={{ color: 'white' }} />} */}
-          <MdDarkMode style={{ color: 'white' }} />
+          {theme === 'dark' ? <FaLightbulb style={{ color: 'white' }} /> : <MdDarkMode style={{ color: 'white' }} />}
         </button>
       </Header>
       <Hero/>

@@ -40,7 +40,7 @@ const MobileHeader = ({ children }) => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: i * 0.4,
+        delay: i * 0.3,
         type: "spring",
         stiffness: 400,
         damping: 10,
@@ -103,15 +103,18 @@ const MobileHeader = ({ children }) => {
               <a href="#home" onClick={closeMenu}>Home</a>
             </motion.li>
             <motion.li variants={linkVariants} custom={2} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="#about" onClick={closeMenu}>About</a>
+              <a href="#skills" onClick={closeMenu}>Skills</a>
             </motion.li>
             <motion.li variants={linkVariants} custom={3} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="#services" onClick={closeMenu}>Services</a>
+              <a href="#about" onClick={closeMenu}>About</a>
             </motion.li>
             <motion.li variants={linkVariants} custom={4} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href="#contact" onClick={closeMenu}>Contact</a>
+              <a href="#projects" onClick={closeMenu}>Project</a>
             </motion.li>
             <motion.li variants={linkVariants} custom={5} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <a href="#contact" onClick={closeMenu}>Contact</a>
+            </motion.li>
+            <motion.li variants={linkVariants} custom={6} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               {children}
             </motion.li>
 

@@ -46,7 +46,7 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: process.env.REACT_APP_ACCESS_KEY, // Use environment variable for access key
+          access_key: process.env.REACT_APP_ACCESS_KEY,
           ...formData,
         }),
       });
@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form">
+    <div id='contact' className="contact-form">
       <h2 className="contact-form__title">Send me a message!</h2>
       <p className="contact-form__subtitle">
         Got a question or proposal, or just want to say hello? Go ahead.
@@ -104,7 +104,7 @@ const Contact = () => {
             className="contact-form__textarea"
             id="message"
             name="message"
-            placeholder="Your message here"
+            placeholder="Hi, I think we need a design system for our products at Company X. How soon can you hop on to discuss this?"
             value={formData.message}
             onChange={handleChange}
             disabled={loading} // Disable textarea when loading

@@ -86,4 +86,18 @@ body, html, #root {
   }
 
   
- 
+ #home{
+  scroll-margin-top: 100px ;
+ }
+ #skills{
+  scroll-margin-top: 100px!important;
+ }
+ #projects{
+  scroll-margin-top: 100px ;
+ }
+ #about{
+  scroll-margin-top: 80px ;
+ }
+ #contact{
+  scroll-margin-top: 50px ;
+ }
