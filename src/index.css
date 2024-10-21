@@ -101,3 +101,10 @@ body, html, #root {
  #contact{
   scroll-margin-top: 50px ;
  }
+
+ @media (max-width: 768px) {
+  svg {
+    width: 50px; /* Adjust as needed */
+    height: auto; /* To maintain aspect ratio */
+  }
+}
