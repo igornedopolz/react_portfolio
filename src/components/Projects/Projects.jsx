@@ -11,7 +11,7 @@ const Projects = () => {
           <a 
             href="https://rednify.com/en" 
             className='project-link' 
-            style={{ backgroundImage: 'url(rednify.png)' }} 
+            style={{ backgroundImage: 'url(Rednify.png)' }} 
             aria-label="Project 1 - View More Details"
           >
             {/* Hidden text for accessibility */}
