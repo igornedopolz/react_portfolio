@@ -167,18 +167,21 @@ header{
   }
   
   .mobile-nav ul {
+    width: 200px;
     list-style: none;
     padding: 0;
     text-align: center;
   }
   
   .mobile-nav ul li {
+    width: 200px;
     margin: 54px 0;
     display: flex;
     justify-content: center;
   }
   
   .mobile-nav ul li a {
+    width: 200px;
     color: white;
     text-decoration: none;
     font-size: 3em;
