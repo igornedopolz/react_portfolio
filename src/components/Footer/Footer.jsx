@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__social-media">
           <h3 className="footer__title">Follow</h3>
-            <p className="footer__social-item"><a href="https://twitter.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            <p className="footer__social-item"><a href="https://linkedin.com/" className="footer__social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+            <p className="footer__social-item"><a href="https://github.com/igornedopolz" className="footer__social-link" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            <p className="footer__social-item"><a href="https://www.linkedin.com/in/igor-nedopolz-33044a309" className="footer__social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
 
         <div className="footer__contact">
