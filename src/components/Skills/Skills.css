@@ -26,6 +26,8 @@
 }
 
 .skills-header {
+    max-width: 1600px;
+    margin: auto;
   text-align: right;
   font-size: 6em;
   font-family: "Permanent Marker", cursive;
