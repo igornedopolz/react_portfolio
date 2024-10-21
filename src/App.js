@@ -69,12 +69,12 @@ function App() {
         <button onClick={toggleTheme} className="theme-switcher" aria-label="Toggle Theme">
         {theme === 'dark' ? (
           <svg
-            stroke="currentColor"
-            fill="currentColor"
+            stroke="white"
+            fill="white"
             strokeWidth="0" // In JSX, use camelCase for properties like 'stroke-width'
             viewBox="0 0 352 512"
-            height="1em"
-            width="1em"
+            height="24px"
+            width="24px"
             xmlns="http://www.w3.org/2000/svg"
             style={{ color: 'white' }} // Correct style syntax in JSX
           >
@@ -82,12 +82,12 @@ function App() {
           </svg>
         ) : (
           <svg
-            stroke="currentColor"
-            fill="currentColor"
+            stroke="white"
+            fill="white"
             strokeWidth="0" // In JSX, use camelCase for properties like 'stroke-width'
             viewBox="0 0 24 24"
-            height="1em"
-            width="1em"
+            height="24px"
+            width="24px"
             xmlns="http://www.w3.org/2000/svg"
             style={{ color: 'white' }} // Correct style syntax in JSX
           >
