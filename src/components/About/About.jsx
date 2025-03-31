@@ -9,7 +9,7 @@ const About = () => {
         <div className="about-content">
           <div className="profile-picture">
             {/* You can add your image URL here */}
-            <img src="https://via.placeholder.com/150" alt="Your Profile" />
+            <img src="About.JPG" alt="Your Profile" />
           </div>
           <div className="bio">
             <p>
